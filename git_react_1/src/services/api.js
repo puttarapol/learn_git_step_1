@@ -1,10 +1,11 @@
 
-const BASE_URL = 'http://https://dummyjson.com/'
+const BASE_URL = 'https://dummyjson.com'
 
 export const api = {
 
-    detPtoducts: async( limit = 30 ,skip = 0 )=>{
+    getProducts: async( limit = 30 ,skip = 0 )=>{
        const response = await fetch(`${BASE_URL}/products?limit=${limit}&skip=${skip}`);
+       console.log(response)
        return response.json();
     } ,
 
